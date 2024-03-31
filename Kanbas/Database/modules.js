@@ -84,12 +84,52 @@ export default [
     name: "Fundamentals of Aerodynamics",
     description: "Basic aerodynamic concepts and fluid dynamics principles.",
     course: "RS102",
+    lessons: [
+      {
+        _id: "L301",
+        name: "Nozzle Design",
+        description: "Overview of different types of rocket nozzles.",
+        module: "M103",
+      },
+      {
+        _id: "L302",
+        name: "Nozzle Performance",
+        description: "Understanding nozzle performance and efficiency.",
+        module: "M103",
+      },
+      {
+        _id: "L303",
+        name: "Nozzle Optimization",
+        description: "Optimizing nozzle design for specific applications.",
+        module: "M103",
+      },
+    ],
   },
   {
     _id: "M202",
     name: "Subsonic and Supersonic Flow",
     description: "Understanding subsonic and supersonic aerodynamic behaviors.",
     course: "RS102",
+    lessons: [
+      {
+        _id: "L301",
+        name: "Nozzle Design",
+        description: "Overview of different types of rocket nozzles.",
+        module: "M103",
+      },
+      {
+        _id: "L302",
+        name: "Nozzle Performance",
+        description: "Understanding nozzle performance and efficiency.",
+        module: "M103",
+      },
+      {
+        _id: "L303",
+        name: "Nozzle Optimization",
+        description: "Optimizing nozzle design for specific applications.",
+        module: "M103",
+      },
+    ],
   },
   {
     _id: "M203",
