@@ -1,6 +1,11 @@
 import * as dao from "./dao.js";
 
 export default function CourseRoutes(app) {
+  const getAllCourses = async (req, res) => {
+    const courses = await dao.getAllCourses();
+    res.send(courses);
+  }
+
   app.get("/api/courses/:id", async (req, res) => {
     const { id } = req.params;
     const course = await dao.getCourseById(id);
@@ -25,8 +30,5 @@ export default function CourseRoutes(app) {
     const course = await dao.createCourse(req.body)
     res.send(course);
   });
-  app.get("/api/courses", async (req, res) => {
-    const courses = dao.getAllCourses();
-    res.send(courses);
-  });
+  app.get("/api/courses", getAllCourses);
 }
