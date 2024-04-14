@@ -19,7 +19,8 @@ function ModuleRoutes(app) {
       _id: new Date().getTime().toString(),
     };
     const module = await dao.createModule(newModule)
-    res.send(module);
+    const newlyCreated = await dao.findModuleById(req.body.id)
+    res.send(newlyCreated[0]);
   });
   app.get("/api/courses/:cid/modules", async (req, res) => {
     const { cid } = req.params;
