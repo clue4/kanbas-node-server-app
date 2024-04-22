@@ -15,6 +15,7 @@ const quizSchema = new mongoose.Schema({
     availableDate: Date,
     untilDate: Date,
     published: Boolean,
+    instructions: String,
     name: String,
     course: String,
     questions: [{
