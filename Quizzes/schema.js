@@ -19,10 +19,10 @@ const quizSchema = new mongoose.Schema({
     name: String,
     course: String,
     questions: [{
-      questionType: String,
+      type: String,
       title: String,
       points: Number,
-      question: String, // may be changed after using wysiwyg
+      question: String,
       correctAnswer: mongoose.Mixed,
       possibleAnswers: [String],
       correctAnswers: [String],
