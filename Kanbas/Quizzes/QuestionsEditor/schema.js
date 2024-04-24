@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const questionSchema = new mongoose.Schema({
   type: { type: String, required: true, enum: ['MultipleChoice', 'TrueFalse', 'FillInBlank'] },
   title: { type: String, required: true },
+  quiz: { type: String, required: true }, 
   points: { type: Number, required: true },
   question: { type: String, required: true },
   correctAnswer: { type: mongoose.Schema.Types.Mixed, required: function() {
@@ -15,6 +16,6 @@ const questionSchema = new mongoose.Schema({
     return this.type === 'FillInBlank';
   }},
 }, 
-{ collection: "quizzes" });
+{ collection: "questions" });
 
 export default questionSchema;
