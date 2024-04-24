@@ -7,6 +7,7 @@ import UserRoutes from "./Users/routes.js";
 import cors from "cors";
 import CourseRoutes from "./Kanbas/courses/routes.js"
 import ModuleRoutes from "./Kanbas/modules/routes.js"
+import QuizRoutes from "./Quizzes/routes.js";
 import Hello from "./hello.js";
 import Lab5 from "./lab5.js";
 import QuizQuestionsRoutes from "./Quizzes/QuestionsEditor/routes.js";
@@ -42,6 +43,7 @@ app.use(express.json());
 UserRoutes(app);
 ModuleRoutes(app);
 CourseRoutes(app);
+QuizRoutes(app);
 QuizQuestionsRoutes(app);
 Lab5(app);
 Hello(app);

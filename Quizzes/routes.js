@@ -29,9 +29,9 @@ export default function QuizRoutes(app) {
     res.json(status); // change to currentUser?
   };
 
-  app.post("/api/quizzes", createQuiz);
-  app.get("/api/quizzes/:courseId", findAllQuizzesForCourse);
-  app.get("/api/quizzes/:quizId", findQuizById);
-  app.put("/api/quizzes/:quizId", updateQuiz);
-  app.delete("/api/quizzes/:quizId", deleteQuiz);
+  app.post("/api/courses/quizzes", createQuiz);
+  app.get("/api/courses/quizzes/:courseId", findAllQuizzesForCourse);
+  app.get("/api/courses/quizzes/:quizId", findQuizById);
+  app.put("/api/courses/quizzes/:quizId", updateQuiz);
+  app.delete("/api/courses/quizzes/:quizId", deleteQuiz);
 }
