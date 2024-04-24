@@ -1,12 +1,8 @@
 import model from "./model.js";
-export const createQuestion = (question) => {
-// logic
-};
 
-export const getAllQuestionsForQuiz = (quizId) => model.find({
-    // logic
-});
+// question should already be formatted correctly for mongo
+export const createQuestion = (question) => { model.create(question); };
 
-export const updateQuestion = (quizId, title) =>  model.updateOne({
-// logic
-});
+export const getAllQuestionsForQuiz = (quizId) => model.find({ quiz: quizId });
+
+export const deleteAllQuestionsForQuiz = (quizId) => model.deleteMany({ quiz: quizId });

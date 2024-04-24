@@ -18,16 +18,6 @@ const quizSchema = new mongoose.Schema({
     instructions: String,
     name: String,
     course: String,
-    questions: [{
-      type: String,
-      title: String,
-      points: Number,
-      question: String,
-      correctAnswer: mongoose.Mixed,
-      possibleAnswers: [String],
-      correctAnswers: [String],
-      // typing is less strict here - not sure how to do it well in Mongoose
-    }]
   },
   { collection: "quizzes" });
 export default quizSchema;
