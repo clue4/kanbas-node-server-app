@@ -8,4 +8,5 @@ export const findQuizById = (quizId) => model.findById(quizId);
 export const updateQuiz = (quizId, quiz) =>  model.updateOne({ _id: quizId }, { $set: quiz });
 export const deleteQuiz = (quizId) => model.deleteOne({ _id: quizId });
 export const updateQuizPointsAndLength = (quizId, points, numQuestions) => model.findByIdAndUpdate(quizId, { $set: {points: points, numQuestions: numQuestions}});
+export const updateQuizPublish = (quizId) => model.findByIdAndUpdate(quizId, {$set: {published: true}});
 export const findAllQuizzes = () => model.find();

@@ -39,6 +39,11 @@ export default function QuizRoutes(app) {
 
 
   app.put("/api/courses/quizzes/:quizId/updatePointsAndNumQuestions", updateQuizPointsAndLength);
+  app.put("/api/courses/quizzes/:quizId/updateQuizPublish", async (req, res) => {
+    const { quizId }= req.params;
+    const response = await dao.updateQuizPublish(quizId);
+    res.send(response);
+  })
   app.post("/api/quizzes", createQuiz);
   app.get("/api/quizzes/courses/:courseId", findAllQuizzesForCourse);
   app.get("/api/quizzes/:quizId", findQuizById);
