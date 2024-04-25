@@ -29,9 +29,19 @@ export default function QuizRoutes(app) {
     res.json(status); // change to currentUser?
   };
 
+  const updateQuizPointsAndLength = async (req, res) => {
+    const { quizId } = req.params;
+    const { points, numQuestions } = req.body;
+
+    const status = await dao.updateQuizPointsAndLength(quizId, points, numQuestions);
+    res.json(status);
+  };
+
+
   app.post("/api/courses/quizzes", createQuiz);
   app.get("/api/courses/quizzes/:courseId", findAllQuizzesForCourse);
   app.get("/api/courses/quizzes/:quizId", findQuizById);
   app.put("/api/courses/quizzes/:quizId", updateQuiz);
   app.delete("/api/courses/quizzes/:quizId", deleteQuiz);
+  app.put("/api/courses/quizzes/:quizId/updatePointsAndNumQuestions", updateQuizPointsAndLength);
 }
