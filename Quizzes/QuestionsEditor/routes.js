@@ -19,7 +19,6 @@ function QuizQuestionsRoutes(app) {
     const { qid } = req.params;
     const questions = req.body;
     const newQuestions = [];
-    console.log(qid);
   
     try {
       await dao.deleteAllQuestionsForQuiz(qid);
