@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 const quizSchema = new mongoose.Schema({
     quizType: String,
     points: Number,
+    numQuestions: Number,
     assignmentGroup: String,
     shuffleAnswers: Boolean,
     timeLimit: Number,
